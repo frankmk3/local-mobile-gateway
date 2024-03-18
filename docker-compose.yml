@@ -1,0 +1,9 @@
+services:
+  nginx:
+    image: nginx
+    ports:
+      - 8090:443
+      - 8089:80
+    volumes:
+      - ./nginx/conf.d/service.conf:/etc/nginx/nginx.conf
+      - ./nginx/certs/:/etc/nginx/ssl/
